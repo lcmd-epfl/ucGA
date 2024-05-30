@@ -2,29 +2,14 @@
 
 ## Overview
 
-This repository contains the implementation of an uncertainty-controlled genetic algorithm (ucGA) for the design of singlet fission materials. The algorithm optimizes multiple properties such as excited state energies, synthesizability, and singlet exciton size using ensemble machine learning predictions.
+This repository contains the implementation of the uncertainty-controlled genetic algorithm (ucGA) for the design of singlet fission materials presented in the paper (TODO:Link).
 
-## Repository Structure
-
-- **active_learning/**: Code for retraining models in the active-learning GA setting (optional).
-- **assembler/**: Code for automatically assembling molecules from a set of fragments.
-- **fitness_evaluation/**: Implementation of the uncertainty-aware fitness function.
-- **model_predictors/**: Code to predict properties using SLATM models.
-- **objective_scores/**: Implementation of synthetic difficulty and energy score calculations.
-- **qm_calcs/**: Scripts for performing xTB and TD-DFT calculations.
-- **utils/**: Utility scripts and functions.
-
-## Important Files
-
-- **config.py**: Configuration file for setting paths and parameters for the genetic optimization. Edit this file to specify paths for input data, models, and output directories according to your system's directory structure.
-- **main.py**: Main script for launching the uncertainty-aware optimization.
-- **optimization.py**: Script executing the uncertainty-aware optimization based on NaviCatGA.
 
 ## Installation
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-repo/ucGA.git
+    git clone https://github.com/lucaschaufelberger/ucGA.git
     cd ucGA
     ```
 
@@ -34,11 +19,6 @@ This repository contains the implementation of an uncertainty-controlled genetic
     conda activate ucGA
     ```
 
-3. **Install additional dependencies** (if needed):
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Usage
 
 1. **Configure the parameters**:
@@ -46,18 +26,25 @@ This repository contains the implementation of an uncertainty-controlled genetic
 
 2. **Run the main optimization**:
     ```bash
-    python main.py
+    python main.py _<output_folder>_
     ```
+## Important Files
 
-## Repository Contents
+- **config.py**: Configuration file for setting paths and parameters for the genetic optimization. Edit this file to specify paths for input data, models, and output directories according to your system's directory structure.
+- **main.py**: Main script for launching the uncertainty-aware optimization.
 
-- **.gitignore**: Specifies files and directories to be ignored by Git.
-- **README.md**: This file, providing an overview and instructions.
-- **large_blobs.txt**: List of large blobs identified in the repository.
-- **large_files.txt**: List of large files identified in the repository.
-- **output.log**: Log file for capturing output messages.
-- **evolution.png**: Visualization of the genetic algorithm's evolution.
-- **ucga.yml**: YAML file for setting up the Conda environment.
+## Repository Structure
+
+
+- **assembler/**: Automatically assembling molecules from a set of fragments.
+- **fitness_evaluation/**: Implementation of the uncertainty-aware fitness function.
+- **model_predictors/**: Code to predict properties using SLATM models.
+- **objective_scores/**: Implementation of synthetic difficulty and energy score calculations.
+- **qm_calcs/**: Scripts for performing xTB and TD-DFT calculations.
+- **utils/**: Utility scripts and functions.
+
+
+
 
 ## Citation
 
