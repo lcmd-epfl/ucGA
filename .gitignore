@@ -1,0 +1,9 @@
+models/
+utils/scscore/models/
+main.out
+./models
+# Ignore optimizer state files
+*.pt
+
+# Ignore PyTorch model binaries
+*.bin
