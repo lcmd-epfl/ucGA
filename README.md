@@ -26,7 +26,7 @@ This repository contains the implementation of the uncertainty-controlled geneti
 
 2. **Run the main optimization**:
     ```bash
-    python main.py _<output_folder>_
+    python main.py <output_folder>
     ```
 ## Important Files
 
