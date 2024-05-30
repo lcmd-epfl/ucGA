@@ -1,0 +1,18 @@
+models/
+utils/scscore/models/
+main.out
+./models
+qm_calcs/
+.ipynb_checkpoints
+__pycache__
+.optimization.py.swp
+*.png
+.*
+*.log
+*.txt
+# Ignore optimizer state files
+*.pt
+
+# Ignore PyTorch model binaries
+*.bin
+qm_calcs/
