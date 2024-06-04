@@ -93,7 +93,7 @@ class Config:
 
         
         # Model paths for SLATM model
-        self.mbtypes_path= self.config_dir / "mbtypes.npy"
+        self.mbtypes_path= self.config_dir / "utils/mbtypes.npy"
         self.slatm_models_location = self.config_dir / "models/slatm_model/"
         self.S1_slatm_model_path = self.slatm_models_location / "S1_exc_model.sav"
         self.T1_slatm_model_path = self.slatm_models_location / "T1_exc_model.sav"
