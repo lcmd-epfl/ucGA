@@ -7,6 +7,9 @@ import sys
 
 path=sys.argv[1]
 
+working_dir = Path(__file__).parent
+python_path = os.environ.get('PYTHONPATH', '')
+
 from ucGA.fitness_evaluation.fitness_evaluation import calculate_fitness_uncertainty_aware_parallelized
 from optimization import UncAGA_Runner
 from config import Config
@@ -15,8 +18,7 @@ from config import Config
 
 def main():
     #working_dir = "/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data"
-    working_dir = Path(__file__).parent
-    python_path = os.environ.get('PYTHONPATH', '')
+
     
     
     # Append your working directory to PYTHONPATH
