@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 path=sys.argv[1]
-sys.path.append(Path(__file__).parent)
+sys.path.append(str(Path(__file__).parent))
 
 from ucGA.fitness_evaluation.fitness_evaluation import calculate_fitness_uncertainty_aware_parallelized
 from optimization import UncAGA_Runner
