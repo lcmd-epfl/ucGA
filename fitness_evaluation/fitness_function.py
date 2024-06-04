@@ -20,7 +20,6 @@ from ucGA.objective_scores.energy_score import energy_score
 from ucGA.objective_scores.synthetic_difficulty import synthetic_difficulty_score
 
 
-# Append paths if absolutely necessary (not recommended)
 sys.path.append(Path(RDConfig.RDContribDir) / 'SA_Score')
 
 @ray.remote
@@ -33,22 +32,19 @@ class FitnessEvaluator:
         - generation (int): Current generation in the evolutionary algorithm.
         """
         
-        #new_paths="/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/"
-        #os.environ['PYTHONPATH'] += os.pathsep + new_paths
         
         
         import sys
-        sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
-        import UncAGA.utils.scscore
-        import UncAGA.utils.scscore.scscore.standalone_model_numpy as standalone_model_numpy
+        #sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
+        import ucGA.utils.scscore
+        import ucGA.utils.scscore.scscore.standalone_model_numpy as standalone_model_numpy
 
-        from UncAGA.model_predictors.slatm_model_eval import SLATMPredictor
-        from UncAGA.config import Config
-        from UncAGA.quantum_calculations.xtb import XTB_Processor
-        from UncAGA.quantum_calculations.slatm import generate_single_slatm
-        from UncAGA.objective_scores.energy_score import energy_score
-        from UncAGA.objective_scores.synthetic_difficulty import synthetic_difficulty_score        
-        print("2",sys.path,flush=True)
+        from ucGA.model_predictors.slatm_model_eval import SLATMPredictor
+        from ucGA.config import Config
+        from ucGA.quantum_calculations.xtb import XTB_Processor
+        from ucGA.quantum_calculations.slatm import generate_single_slatm
+        from ucGA.objective_scores.energy_score import energy_score
+        from ucGA.objective_scores.synthetic_difficulty import synthetic_difficulty_score        
 
         self.list_chromosomes = list_chromosomes
         self.generation = generation
