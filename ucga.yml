@@ -1,4 +1,4 @@
-name: ucGA2
+name: ucGA
 channels:
   - pytorch
   - conda-forge
@@ -251,7 +251,7 @@ dependencies:
       - markupsafe==2.1.2
       - marshmallow==3.19.0
       - marshmallow-enum==1.5.1
-      - matplotlib==3.3.0
+      - matplotlib-base==3.3.3
       - matplotlib-inline==0.1.6
       - matter-chimera==1.0
       - mdurl==0.1.2
