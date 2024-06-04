@@ -7,17 +7,7 @@ from rdkit.Chem import RDConfig
 import numpy as np
 import ray
 import os
-"""
-# TODO
-#from FORMED_ML_evaluation.S1_ehdist_predict import S1_ehdist_model
-#from FORMED_ML_evaluation.S1_exc_predict import S1_exc_model
-#from FORMED_ML_evaluation.T1_exc_predict import T1_exc_model
 
-# TODO
-from TODO import smiles2mol_structure
-from TODO import synthetic_difficulty_score
-import sascorer
-"""
 import sys
 sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
 import UncAGA.utils.scscore

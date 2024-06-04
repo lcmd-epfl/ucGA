@@ -20,7 +20,7 @@ class Config:
         # Iterations and UCB settings
         self.nr_ml_runs_per_iteration = 50  
         
-        self.nr_ucb_recalculate = 8  # In the end, perform DFT on these
+        self.nr_ucb_recalculate = 8  # In the end, perform DFT on these N top candidates in the last generation
         self.bucket_size_chemberta = 16  # Bucket size for batch evaluation in the ChemBERTa SMILES model
         self.nr_evals_per_chrom = 6  # Nr. of evaluations of the extended ensemble
         self.nr_evals_SMILES = 4  # Nr. of SMILES model evaluation in the extended ensemble
@@ -65,7 +65,6 @@ class Config:
         
         # File handling for SLATM calculation
         self.sizeof_slatm=50518
-        self.mbtypes_path="/home/student7/LucaSchaufelberger/MasterThesis/FORMED_ML/predict/data_test/mbtypes.npy"
         
         # DFT scripts path
         self.utils_path = self.config_dir / "utils"
@@ -94,6 +93,7 @@ class Config:
 
         
         # Model paths for SLATM model
+        self.mbtypes_path= self.config_dir / "mbtypes.npy"
         self.slatm_models_location = self.config_dir / "models/slatm_model/"
         self.S1_slatm_model_path = self.slatm_models_location / "S1_exc_model.sav"
         self.T1_slatm_model_path = self.slatm_models_location / "T1_exc_model.sav"

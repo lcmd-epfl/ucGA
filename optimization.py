@@ -39,7 +39,7 @@ class UncAGA_Runner:
         solver = SmilesGenAlgSolver(
             n_genes=self.config.n_genes,
             pop_size=self.config.pop_size,
-            max_gen=self.config.max_gen,
+            max_gen=1 #self.config.max_gen,
             alphabet_list=self.config.alphabet_list,
             chromosome_to_smiles=self.assembler_smi,
             fitness_function=self._void_func,

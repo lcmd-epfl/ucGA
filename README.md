@@ -1,5 +1,7 @@
 # Inverse Design of Singlet Fission Materials with Uncertainty-Controlled Genetic Optimization
 
+![Overview](/Overview.png)
+
 ## Overview
 
 This repository contains the implementation of the uncertainty-controlled genetic algorithm (ucGA) for the design of singlet fission materials presented in the paper (TODO:Link).
@@ -18,6 +20,7 @@ This repository contains the implementation of the uncertainty-controlled geneti
     conda env create -f ucga.yml
     conda activate ucGA
     ```
+3. **Install [NaviCatGA](https://github.com/lcmd-epfl/NaviCatGA) and [QML](https://github.com/qmlcode/qml) by following the instructions on the respective project websites**
 
 ## Usage
 
@@ -36,11 +39,12 @@ This repository contains the implementation of the uncertainty-controlled geneti
 ## Repository Structure
 
 
-- **assembler/**: Automatically assembling molecules from a set of fragments.
-- **fitness_evaluation/**: Implementation of the uncertainty-aware fitness function.
-- **model_predictors/**: Code to predict properties using SLATM models.
-- **objective_scores/**: Implementation of synthetic difficulty and energy score calculations.
-- **qm_calcs/**: Scripts for performing xTB and TD-DFT calculations.
+- **assembler/**: Automatically assembling molecules from the reFORMED database.
+- **fitness_evaluation/**: Uncertainty-aware fitness function determination.
+- **model_predictors/**: Prediction of properties using SLATM models.
+- **models/**: Upload your trained models here. 
+- **objective_scores/**: Calculate scores to assess singlet fission propensity.
+- **quantum_calculations/**: Scripts for performing xTB and TD-DFT calculations.
 - **utils/**: Utility scripts and functions.
 
 
@@ -56,7 +60,7 @@ Luca Schaufelberger, et al. TODO
 
 ### Contact
 
-For questions and suggestions, please contact `schaluca@ethz.ch'
+For questions, please contact `schaluca@ethz.ch'
 
 ## Abstract
 
