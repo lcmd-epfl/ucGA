@@ -13,12 +13,10 @@ class Config:
         # Basic genetic algorithm parameters
         self.n_genes = 3  # Nr. of genes
         self.pop_size = 2 #48  # Population Size
-        self.max_gen = 2  #50 
-
+        self.nr_ml_runs_per_iteration = 1 # Nr of generations
 
 
         # Iterations and UCB settings
-        self.nr_ml_runs_per_iteration = 50  
         
         self.nr_ucb_recalculate = 8  # In the end, perform DFT on these N top candidates in the last generation
         self.bucket_size_chemberta = 16  # Bucket size for batch evaluation in the ChemBERTa SMILES model
