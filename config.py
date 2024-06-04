@@ -12,8 +12,8 @@ class Config:
         
         # Basic genetic algorithm parameters
         self.n_genes = 3  # Nr. of genes
-        self.pop_size = 48 #48  # Population Size
-        self.max_gen = 50  # 
+        self.pop_size = 2 #48  # Population Size
+        self.max_gen = 2  #50 
 
 
 
