@@ -5,12 +5,9 @@ import csv
 import logging
 import numpy as np
 import sys
-sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
-from UncAGA.fitness_evaluation.chemberta_batch_prediction import ChembertaBatchPredictor
-from UncAGA.fitness_evaluation.fitness_function import FitnessEvaluator
-
-
-from UncAGA.assembler.assembler import combine_fragments
+from ucGA.fitness_evaluation.chemberta_batch_prediction import ChembertaBatchPredictor
+from ucGA.fitness_evaluation.fitness_function import FitnessEvaluator
+from ucGA.assembler.assembler import combine_fragments
 
 
 

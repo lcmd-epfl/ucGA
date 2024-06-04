@@ -42,7 +42,6 @@ This repository contains the implementation of the uncertainty-controlled geneti
 - **assembler/**: Automatically assembling molecules from the reFORMED database.
 - **fitness_evaluation/**: Uncertainty-aware fitness function determination.
 - **model_predictors/**: Prediction of properties using SLATM models.
-- **models/**: Upload your trained models here. 
 - **objective_scores/**: Calculate scores to assess singlet fission propensity.
 - **quantum_calculations/**: Scripts for performing xTB and TD-DFT calculations.
 - **utils/**: Utility scripts and functions.

@@ -6,8 +6,8 @@ from chimera import Chimera
 
 from config import Config
 from navicatGA.smiles_solver import SmilesGenAlgSolver
-from UncAGA.assembler.assembler import combine_fragments
-from UncAGA.quantum_calculations.dft import DFTBatchEvaluator
+from ucGA.assembler.assembler import combine_fragments
+from ucGA.quantum_calculations.dft import DFTBatchEvaluator
 
 class UncAGA_Runner:
     def __init__(self, config):
@@ -39,7 +39,7 @@ class UncAGA_Runner:
         solver = SmilesGenAlgSolver(
             n_genes=self.config.n_genes,
             pop_size=self.config.pop_size,
-            max_gen=1 #self.config.max_gen,
+            max_gen=1, #self.config.max_gen,
             alphabet_list=self.config.alphabet_list,
             chromosome_to_smiles=self.assembler_smi,
             fitness_function=self._void_func,

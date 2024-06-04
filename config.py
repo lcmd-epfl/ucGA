@@ -6,7 +6,7 @@ import pandas as pd
 class Config:
     def __init__(self, output_path,lambda_cb):
         self.config_dir = Path(__file__).parent        
-
+        print("config_dir",self.config_dir)
         
         self.lambda_cb = lambda_cb  # confidence bound (explorative), use -2 for exploitative, +2 for explorative
         
@@ -38,10 +38,10 @@ class Config:
         
         
         # Load cores and subst data from csv files
-        df_cores = pd.read_csv(self.config_dir.parent /  "Fragment_Pool/cores.csv")
+        df_cores = pd.read_csv(self.config_dir /  "utils/fragment_pool/cores.csv")
         self.cores = df_cores["Smiles"].values.tolist()
         
-        df_subst = pd.read_csv(self.config_dir.parent /  "Fragment_Pool/substituents.csv")
+        df_subst = pd.read_csv(self.config_dir /  "utils/fragment_pool/substituents.csv")
         self.subst = df_subst["Smiles"].values.tolist()
 
         # Set up gene pool (core and substituent lists)

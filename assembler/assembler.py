@@ -1,7 +1,5 @@
 from rdkit import Chem
 from rdkit.Chem import AllChem
-#from rdkit.Chem.Draw import IPythonConsole
-#from rdkit.Chem import Draw
 from rdkit.Chem import Recap,BRICS
 from rdkit.Chem.Draw import MolDrawing, DrawingOptions
 from rdkit.Chem import ReplaceCore, GetMolFrags, ReplaceSubstructs, CombineMols

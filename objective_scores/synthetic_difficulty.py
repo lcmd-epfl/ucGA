@@ -5,8 +5,8 @@ import os
 import sys
 sys.path.append(os.path.join(RDConfig.RDContribDir,'SA_Score'))
 import sascorer
-import UncAGA.utils.scscore
-import UncAGA.utils.scscore.scscore.standalone_model_numpy as standalone_model_numpy
+import ucGA.utils.scscore
+import ucGA.utils.scscore.scscore.standalone_model_numpy as standalone_model_numpy
 
 def synthetic_difficulty_score(smiles,config,n=4,factor=6):
     """
