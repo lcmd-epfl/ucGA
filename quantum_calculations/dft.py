@@ -6,8 +6,8 @@ import numpy as np
 import theodore
 import csv
 
-from UncAGA.quantum_calculations.xtb import XTB_Processor
-from UncAGA.quantum_calculations.postprocessing import theodore_analysis
+from ucGA.quantum_calculations.xtb import XTB_Processor
+from ucGA.quantum_calculations.postprocessing import theodore_analysis
 
 class DFTBatchEvaluator:  
     def __init__(self, list_chromosomes, output_suffix,config):

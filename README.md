@@ -20,7 +20,11 @@ This repository contains the implementation of the uncertainty-controlled geneti
     conda env create -f ucga.yml
     conda activate ucGA
     ```
-3. **Install [NaviCatGA](https://github.com/lcmd-epfl/NaviCatGA) and [QML](https://github.com/qmlcode/qml) by following the instructions on the respective project websites**
+3. **Further Installations**
+    Install [NaviCatGA](https://github.com/lcmd-epfl/NaviCatGA) and [QML](https://github.com/qmlcode/qml) by following the instructions on the respective project websites.
+
+4. **SCScore**: 
+   Install the [SCScore](https://github.com/connorcoley/scscore) to utils/scscore.
 
 ## Usage
 

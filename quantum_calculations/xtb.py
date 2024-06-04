@@ -9,8 +9,8 @@ from pysisyphus.calculators.XTB import XTB as pysis_XTB
 from pysisyphus.helpers import geom_from_xyz_file
 
 
-from UncAGA.utils.wrapper import Wrapper
-from UncAGA.quantum_calculations.slatm import generate_single_slatm
+from ucGA.utils.wrapper import Wrapper
+from ucGA.quantum_calculations.slatm import generate_single_slatm
 
 
 class XTB_Processor:
