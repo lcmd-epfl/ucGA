@@ -102,7 +102,7 @@ class Config:
 
         
         # Model evaluation parameters
-        self.batch_size =16  #2 #For chemberta batch evaluation (better performance), needs to divide the population 
+        self.batch_size =2  #16 #For chemberta batch evaluation (better performance), needs to divide the population 
         assert self.pop_size % self.batch_size == 0 
         
 
