@@ -31,8 +31,8 @@ def calculate_fitness_uncertainty_aware_parallelized(self, population):
 
 
 def calculate_performance_values(assembled_population,config, round_active_eval, generation):
-    sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
-    print(sys.path)
+    #sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
+    #print(sys.path)
 
     """Calculate fitness in parallel using Ray."""
     chembertabatchpredictor = ChembertaBatchPredictor(config)
@@ -48,7 +48,6 @@ def calculate_performance_values(assembled_population,config, round_active_eval,
         performance_values.append(fitness_evaluator.evaluate(i))
     """
     
-    #TODO PARALLELIZE
     fitness_evaluators = [FitnessEvaluator.remote(config,assembled_population,generation,chemberta_dict) for i in range(len(assembled_population))]
     performance_values_remote = [fitness_evaluators[i].evaluate.remote(i) for i in range(len(assembled_population))]
     performance_values = ray.get(performance_values_remote)

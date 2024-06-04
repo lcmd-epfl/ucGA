@@ -8,7 +8,7 @@ import sascorer
 import ucGA.utils.scscore
 import ucGA.utils.scscore.scscore.standalone_model_numpy as standalone_model_numpy
 
-def synthetic_difficulty_score(smiles,config,n=4,factor=6):
+def synthetic_difficulty_score(smiles,config,scscore_path,n=4,factor=6):
     """
     Calculate the synthetic difficulty score for a given SMILES string.
 
@@ -30,7 +30,7 @@ def synthetic_difficulty_score(smiles,config,n=4,factor=6):
     
     # Load SCScore model
     model_scs = standalone_model_numpy.SCScorer()
-    model_scs.restore(os.path.join('/home/student7/LucaSchaufelberger/MasterThesis/ProjectScripts/scscore', 'models', 'full_reaxys_model_1024uint8', 'model.ckpt-10654.as_numpy.json.gz'))
+    model_scs.restore(os.path.join(scscore_path, 'models', 'full_reaxys_model_1024uint8', 'model.ckpt-10654.as_numpy.json.gz'))
     
     #Calculate SCScore,SAScore and Nr. of heavy atoms
     (smi_scs, sco_scs) = model_scs.get_score_from_smi(smiles)

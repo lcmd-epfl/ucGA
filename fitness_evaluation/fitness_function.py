@@ -123,7 +123,7 @@ class FitnessEvaluator:
             print(self.S1,self.T1,self.energy_score)
             
             ########## SCORE 2 ##########
-            self.array_synth_score_average= synthetic_difficulty_score(self.smiles,self.config)
+            self.array_synth_score_average= synthetic_difficulty_score(self.smiles,self.config,self.config.scscore_path)
             print("self.array_synth_score_average",self.array_synth_score_average)
             ########## SCORE 3 ##########
             S1ehdistance_SLATM = predictor.run_model(self.config.S1ehdist_slatm_model_path)

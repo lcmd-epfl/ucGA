@@ -62,6 +62,7 @@ class Config:
         self.heavy_atom_count_cutoff = 35
         self.scscore_cutoff = 3.8
         self.sascore_cutoff= 5.2
+        self.scscore_path = self.config_dir / "utils/scscore"
         
         # File handling for SLATM calculation
         self.sizeof_slatm=50518
@@ -99,7 +100,7 @@ class Config:
         self.T1_slatm_model_path = self.slatm_models_location / "T1_exc_model.sav"
         self.S1ehdist_slatm_model_path = self.slatm_models_location / "S1_ehdist_model.sav"
         
-
+        
         
         # Model evaluation parameters
         self.batch_size =2  #16 #For chemberta batch evaluation (better performance), needs to divide the population 
