@@ -35,7 +35,6 @@ class FitnessEvaluator:
         
         
         import sys
-        #sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
         import ucGA.utils.scscore
         import ucGA.utils.scscore.scscore.standalone_model_numpy as standalone_model_numpy
 

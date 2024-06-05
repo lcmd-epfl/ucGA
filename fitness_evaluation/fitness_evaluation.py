@@ -31,28 +31,17 @@ def calculate_fitness_uncertainty_aware_parallelized(self, population):
 
 
 def calculate_performance_values(assembled_population,config, round_active_eval, generation):
-    #sys.path.append("/home/student7/LucaSchaufelberger/MasterThesis/Paper_Data/")
-    #print(sys.path)
+
 
     """Calculate fitness in parallel using Ray."""
     chembertabatchpredictor = ChembertaBatchPredictor(config)
     chemberta_dict = chembertabatchpredictor.get_chemberta_output_dict(assembled_population)
-    
-    print("chemberta_dict",chemberta_dict)
-    
-    """
-    performance_values=[]
-    for i in range(len(assembled_population)):
-        fitness_evaluator=FitnessEvaluator(config,assembled_population,generation,chemberta_dict)
-        #print(fitness_evaluator.evaluate(i).shape)
-        performance_values.append(fitness_evaluator.evaluate(i))
-    """
+       
     
     fitness_evaluators = [FitnessEvaluator.remote(config,assembled_population,generation,chemberta_dict) for i in range(len(assembled_population))]
     performance_values_remote = [fitness_evaluators[i].evaluate.remote(i) for i in range(len(assembled_population))]
     performance_values = ray.get(performance_values_remote)
     
-    print(performance_values)
     return performance_values
 
 def process_fitness_data(self,scores,pop_size,nr_evals_per_chrom):
@@ -70,7 +59,6 @@ def process_fitness_data(self,scores,pop_size,nr_evals_per_chrom):
     # identify the predictions where one value is nan
     nan_columns = pd.isna(scores_reshaped).any(axis=1)
     
-    print(nan_columns)
     
     # remove nan columns for chimera (chimera can't handle nan values)
     array_reshaped_without_nan_columns = scores_reshaped[~nan_columns]
@@ -81,10 +69,8 @@ def process_fitness_data(self,scores,pop_size,nr_evals_per_chrom):
     # initialize the performance value array, default is zero (everywhere a nan is detected)
     recovered_array = np.zeros(scores_reshaped.shape[0])
     recovered_array[~nan_columns] = performance_values
-
-    print("recovered with nan handling", recovered_array)
     
-    # reshape back to the TODO
+    # reshape back 
     performance_values_reshaped = recovered_array.reshape(pop_size, nr_evals_per_chrom)
     
     print(performance_values_reshaped)
@@ -107,7 +93,6 @@ def calculate_confidence_bound(performance_values,lambda_cb):
     
     print("std devs", [fitness_std_dev,fitness_std_dev_chemberta,fitness_std_dev_SLATM])
     
-    #TODO double check that
     fitness_std_dev_renorm = np.average([fitness_std_dev,fitness_std_dev_chemberta,fitness_std_dev_SLATM],axis=0,weights=[0.6,0.3,0.1])
 
 

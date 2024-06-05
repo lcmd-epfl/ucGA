@@ -17,7 +17,7 @@ This repository contains the implementation of the uncertainty-controlled geneti
 
 2. **Create and activate the Conda environment**:
     ```bash
-    conda env create -f ucga.yml
+    conda env create -f env.yml
     conda activate ucGA
     ```
 3. **Further Installations**

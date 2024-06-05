@@ -1,5 +1,4 @@
 import sys
-sys.path.append('/home/student7/LucaSchaufelberger/MasterThesis/ProjectScripts/ExternalRepositories/TheoDORE_3.0')
 import theodore
 from theodore.actions import analyze_tden
 from colt.lazyimport import LazyImportCreator, LazyImporter
@@ -10,7 +9,6 @@ from theodore import input_options
 from theodore import lib_tden
 from theodore import lib_exciton
 from theodore import theo_header
-#import cclib
 
 
 
