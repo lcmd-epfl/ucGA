@@ -57,9 +57,8 @@ This repository contains the implementation of the uncertainty-controlled geneti
 
 If you use this code, please cite the following paper:
 
-Luca Schaufelberger, et al. TODO
+Luca Schaufelberger,  TODO
 
-## Authors and Contributions
 
 ### Contact
 
