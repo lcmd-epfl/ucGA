@@ -11,7 +11,7 @@ This repository contains the implementation of the uncertainty-controlled geneti
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/lucaschaufelberger/ucGA.git
+    git clone https://github.com/lcmd-epfl/ucGA.git
     cd ucGA
     ```
 
